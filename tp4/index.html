@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP4 - Formulaire</title>
+    <!-- Try to use local bootstrap if exists; fallback to CDN -->
+    <link rel="stylesheet" href="css/bootstrap.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'">
+    <style>
+      body { padding: 20px; }
+      [data-count] { padding-top: .5rem; font-size: .9rem; color: #555; }
+      #map { margin-top: 1rem; }
+      #messages { display:none; margin-bottom: 1rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>TP4 - Formulaire de contact</h1>
+      <p>Fonctionnalités: géolocalisation, compteur de caractères, stockage local et affichage.</p>
+
+      <div id="messages" class="alert alert-warning"></div>
+
+      <form id="contactForm" novalidate>
+        <div class="row mb-3 align-items-end">
+          <div class="col-2"><label for="name" class="form-label">Nom</label></div>
+          <div class="col"><input id="name" class="form-control" onkeyup="calcNbChar('name')" /></div>
+          <div class="col-1" data-count>0 car.</div>
+        </div>
+
+        <div class="row mb-3 align-items-end">
+          <div class="col-2"><label for="firstname" class="form-label">Prénom</label></div>
+          <div class="col"><input id="firstname" class="form-control" onkeyup="calcNbChar('firstname')" /></div>
+          <div class="col-1" data-count>0 car.</div>
+        </div>
+
+        <div class="row mb-3 align-items-end">
+          <div class="col-2"><label for="birth" class="form-label">Date de naissance</label></div>
+          <div class="col"><input id="birth" type="date" class="form-control" /></div>
+          <div class="col-1" data-count>0 car.</div>
+        </div>
+
+        <div class="row mb-3 align-items-end">
+          <div class="col-2"><label for="adresse" class="form-label">Adresse</label></div>
+          <div class="col"><input id="adresse" class="form-control" onkeyup="calcNbChar('adresse')" /></div>
+          <div class="col-1" data-count>0 car.</div>
+          <div class="col-1"><button id="gps" class="btn btn-outline-primary">GPS</button></div>
+        </div>
+
+        <div id="map" class="col-12"></div>
+
+        <div class="row mb-3 align-items-end">
+          <div class="col-2"><label for="mail" class="form-label">Email</label></div>
+          <div class="col"><input id="mail" type="email" class="form-control" onkeyup="calcNbChar('mail')" /></div>
+          <div class="col-1" data-count>0 car.</div>
+        </div>
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-success">Ajouter</button>
+          <button id="resetStore" class="btn btn-danger">Reset</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <h2>Liste des contacts</h2>
+      <div class="table-responsive">
+        <table class="table table-striped" id="contacts">
+          <thead><tr><th>Nom</th><th>Prénom</th><th>Date</th><th>Adresse</th><th>Email</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <footer class="mt-4">
+        <small>Généré automatiquement le: 2025-11-10 09:45 UTC</small>
+      </footer>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/gps.js"></script>
+    <script src="js/form-validation.js"></script>
+  </body>
+</html>

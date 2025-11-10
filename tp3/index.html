@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TP3 - Bootstrap Formulaire</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <img src="assets/logo_ig.png" alt="Logo Master" width="100"/>
+        <h3>Master 3IR²</h3>
+        <h4>TP AW #3 : Bootstrap</h4>
+      </div>
+
+      <form id="tpForm" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6">
+          <label for="lastname" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="lastname" required />
+          <div class="invalid-feedback">Le nom doit contenir au moins 5 caractères.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="firstname" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="firstname" required />
+          <div class="invalid-feedback">Le prénom doit contenir au moins 5 caractères.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="birthday" class="form-label">Date de naissance</label>
+          <input type="date" class="form-control" id="birthday" required />
+          <div class="invalid-feedback">La date de naissance ne doit pas être dans le futur.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="address" class="form-label">Adresse postale</label>
+          <input type="text" class="form-control" id="address" required />
+          <div class="invalid-feedback">L'adresse doit contenir au moins 5 caractères.</div>
+        </div>
+
+        <div class="col-md-12">
+          <label for="email" class="form-label">Adresse mail</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="invalid-feedback">Veuillez entrer une adresse mail valide.</div>
+        </div>
+
+        <div class="col-12 text-end">
+          <button class="btn btn-primary" type="submit" id="submitBtn">Envoyer</button>
+        </div>
+      </form>
+
+
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Validation du formulaire</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/form-validation.js"></script>
+  </body>
+</html>

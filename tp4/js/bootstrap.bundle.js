@@ -1,0 +1,2 @@
+// placeholder - loading bootstrap bundle from CDN
+(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';document.head.appendChild(s);})();
