@@ -1,40 +1,85 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP2</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco",
-        "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="js/main.js"></script>-->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TP2 — Formulaire</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP2
-  </nav>
-  <h1>tp2</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
-</body>
+  <main class="page">
+    <header class="hero">
+      <img src="identity.png" alt="Logo" class="logo" />
+      <h1>TP #2 — Formulaire & JavaScript</h1>
+      <p class="subtitle">Validation HTML5 + lecture des paramètres d'URL</p>
+    </header>
 
+    <form action="action.html" method="get" class="card" novalidate>
+      <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <p class="row">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" minlength="2" maxlength="20" required placeholder="Ex: Dupont" />
+          <span class="icon-ok">✔</span>
+        </p>
+
+        <p class="row">
+          <label for="firstname">Prénom</label>
+          <input id="firstname" name="firstname" type="text" minlength="2" maxlength="20" required placeholder="Ex: Jean" />
+          <span class="icon-ok">✔</span>
+        </p>
+
+        <p class="row">
+          <label for="birthday">Date de naissance</label>
+          <input id="birthday" name="birthday" type="date" required />
+          <span class="icon-ok">✔</span>
+        </p>
+
+        <p class="row">
+          <label for="address">Adresse postale</label>
+          <input id="address" name="address" type="text" minlength="5" maxlength="50" required placeholder="Rue, Ville" />
+          <span class="icon-ok">✔</span>
+        </p>
+
+        <p class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" minlength="5" maxlength="30" required placeholder="exemple@domaine.tld" />
+          <span class="icon-ok">✔</span>
+        </p>
+
+        <p class="row actions">
+          <input type="submit" class="btn-primary" value="Envoyer" />
+          <input type="reset" class="btn-secondary" value="Réinitialiser" />
+        </p>
+      </fieldset>
+    </form>
+
+  <!-- Client-side enhancement: show native validation messages nicely -->
+  <script>
+  // Optional: beautify validation messages and prevent submit if invalid
+  (function() {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e){
+      if (!form.checkValidity()) {
+        // Let browser show native messages, but also highlight first invalid
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
+        e.preventDefault();
+      }
+    });
+
+    
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach(inp => {
+      inp.addEventListener('input', () => {
+        
+      
+      });
+    });
+  })();
+  </script>
+</body>
 </html>
