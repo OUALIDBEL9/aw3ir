@@ -1,41 +1,56 @@
-<!DOCTYPE html>
-<html>
 
+<!doctype html>
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP1</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="main.js"></script>-->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV - Oualid Belhadj</title>
+  <link rel="stylesheet" href="cv.css">
 </head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP1
+  <header class="header">
+    <img src="images/photo.jpg" alt="Photo de profil" class="photo">
+    <div class="intro">
+      <h1>Oualid <span>Belhadj</span></h1>
+      <p>Ingénieur Réseaux & Systèmes • Master Ingénierie et Innovations en Images et Réseaux</p>
+      <p>📍 46 Rue Edouard Herriot, 93190 Livry-Gargan<br>
+         📧 <a href="mailto:oualidbelhadj7@gmail.com">oualidbelhadj7@gmail.com</a><br>
+         📱 +33 7 51 53 12 46<br>
+         🔗 <a href="https://www.linkedin.com/in/oualid-belhadj" target="_blank">linkedin.com/in/oualid-belhadj</a>
+      </p>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Accueil</a>
+    <a href="formations.html">Formations</a>
+    <a href="experiences.html">Expériences</a>
   </nav>
-  <h1>TP 1</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
 
-  <h2><a href="experiences/index.html">Expériences</a></h2>
+  <main>
+    <section>
+      <h2>Compétences techniques</h2>
+      <ul>
+        <li>Réseaux : TCP/IP, DNS, DHCP, BGP, OSPF, EIGRP, VRF</li>
+        <li>Sécurité : VPN, IDS/IPS, pare-feu, proxy, F5, Checkpoint</li>
+        <li>Outils : Cisco Packet Tracer, MATLAB, VMware, ServiceNow, Centreon</li>
+        <li>Langages : Python, Java, MySQL</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Langues</h2>
+      <p>Français : Natif/Bilingue<br>Anglais : Courant</p>
+    </section>
+
+    <section>
+      <h2>Centres d’intérêt</h2>
+      <p>Sport, Lecture, Natation, Finance, Engagement associatif</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Oualid Belhadj - CV Web TP1</p>
+  </footer>
 </body>
-
 </html>
