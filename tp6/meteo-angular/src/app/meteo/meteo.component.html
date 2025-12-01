@@ -1,0 +1,14 @@
+<h2>Recherche météo</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Ville :</label>
+    <input type="text" class="form-control" [(ngModel)]="city.name" name="city" required>
+  </div>
+
+  <button class="btn btn-primary mt-2" type="submit">Chercher</button>
+</form>
+
+<hr>
+
+
